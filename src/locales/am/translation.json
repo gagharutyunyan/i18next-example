@@ -1,0 +1,11 @@
+{
+  "mainWords": {
+    "hello": "բարև",
+    "bye": "հաջողություն",
+    "night": "Գիշեր"
+  },
+  "pageTitles": {
+    "homePageTitle": "Գլխավոր էջ",
+    "usersPage": "օգտատերեր"
+  }
+}

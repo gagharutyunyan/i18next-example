@@ -1,0 +1,10 @@
+{
+  "mainWords": {
+    "hello": "hello",
+    "bye": "bye"
+  },
+  "pageTitles": {
+    "homePageTitle": "home page",
+    "usersPage": "users page"
+  }
+}

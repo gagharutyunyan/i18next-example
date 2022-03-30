@@ -1,0 +1,10 @@
+{
+  "mainWords": {
+    "hello": "привет",
+    "bye": "пока"
+  },
+  "pageTitles": {
+    "homePageTitle": "Гланная страница",
+    "usersPage": "Пользователи"
+  }
+}
