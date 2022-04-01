@@ -30,12 +30,24 @@ export const removeLngPrefix = (pathname) => {
     return pathname
 }
 
+export const getLngFromUrl = pathname => {
+    for (let lang of languages) {
+        if (pathname.startsWith(`/${lang}/`) || pathname === `/${lang}`) {
+            return lang;
+        }
+    }
+    return null;
+};
+
+const lng = getLngFromUrl(window.location.pathname) || i18n.language;
+
 i18n.use(LanguageDetector).use(initReactI18next).init({
     fallbackLng: "am",
     resources,
     detection: {
         caches: ['cookie']
-    }
+    },
+    lng
 })
 
 export default i18n;

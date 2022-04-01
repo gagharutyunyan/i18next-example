@@ -6,16 +6,16 @@ import {BrowserRouter as Router, Route, Routes, Link} from "react-router-dom";
 import {removeLngPrefix} from "./i18n";
 
 function App() {
-    const { t, i18n: { language } } = useTranslation();
+    const { t, i18n ,i18n: { language } } = useTranslation();
 
     useLayoutEffect(() => {
         const currentPathname = window.location.pathname;
         const newPathname = `/${language}${removeLngPrefix(currentPathname)}`;
-
+        console.log(removeLngPrefix(currentPathname))
         if(currentPathname !== newPathname) {
             window.location.replace(newPathname);
         }
-    }, [])
+    }, [language, i18n])
 
   return (
       <Router basename={`/${language}`}>

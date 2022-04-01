@@ -5,8 +5,7 @@ export const LanguageSwitcher = () => {
     const { i18n } = useTranslation();
     const { pathname, search, hash } = useLocation();
 
-    const switcher = (lng) => (e) => {
-        console.log(e)
+    const switcher = (lng) => () => {
         i18n.changeLanguage(lng)
         window.location.replace(
             `/${lng}${pathname}${search}${hash}`
