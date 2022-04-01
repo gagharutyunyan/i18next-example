@@ -11,7 +11,7 @@ function App() {
     useLayoutEffect(() => {
         const currentPathname = window.location.pathname;
         const newPathname = `/${language}${removeLngPrefix(currentPathname)}`;
-        console.log(removeLngPrefix(currentPathname))
+
         if(currentPathname !== newPathname) {
             window.location.replace(newPathname);
         }
