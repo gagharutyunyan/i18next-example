@@ -9,11 +9,15 @@ function App() {
     const { t, i18n ,i18n: { language } } = useTranslation();
 
     useLayoutEffect(() => {
-        const currentPathname = window.location.pathname;
+        const currentPathname = window.location.href.replace(
+            window.location.origin,
+            ''
+        );
+
         const newPathname = `/${language}${removeLngPrefix(currentPathname)}`;
 
-        if(currentPathname !== newPathname) {
-            window.location.replace(newPathname);
+        if (currentPathname !== newPathname) {
+            window.history.replaceState({}, '', newPathname);
         }
     }, [language, i18n])
 
